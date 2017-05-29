@@ -1,0 +1,99 @@
+; An example for this metadata.txt adapted from QGIS for FreeCAD
+; http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/plugins.html#plugin-metadata
+; All FreeCAD addons repos should fork this metadata.txt and adapt to their project
+; the next section is mandatory
+
+[general]
+name=CADExchanger
+email=yorik@freecadweb.org
+author=Yorik Van Haven
+FreeCADMinimumVersion=0.17.xxxx
+description=This is an example plugin for greeting the world.
+    Multiline is allowed:
+    lines starting with spaces belong to the same
+    field, in this case to the "description" field.
+    HTML formatting is not allowed.
+about=This paragraph can contain a detailed description
+    of the plugin. Multiline is allowed, HTML is not.
+version=version 1.2
+; tracker can either link to a bugtracker or a forum thread link
+tracker=http://bugs.itopen.it
+repository=http://www.itopen.it/repo
+license=????
+
+; end of mandatory metadata
+
+; start of optional metadata
+category=Raster
+changelog=The changelog lists the plugin versions
+    and their changes as in the example below:
+    (also observe the two different styles of changelogs)
+    2.4
+    - Fixed #222: hide label if TimeManager is turned off
+    - Fixed #156: copy parent style to interpolation layer
+    - Fixed #109: save label settings in project
+    - Fixed window resizing issues in label options gui
+    - Fixed window resizing issues in video export gui
+    - Fixed HiDPI issues with arch gui
+    2.3.2
+    - Sponsored fix for #187 and #211
+    - Contributions to testing by @rduivenvoorde
+    2.3.1
+    - Temporarily fixed #198 sorting of frames wrong for animation?
+    - Fixed #197 Export video skips frames by reverting "possible fix for #188, also implements #167? (#189)"
+    2.3
+    - Fixed #157: Now last animation path is saved in QSettings
+    - Made archeology dialog resizable and more readable
+    - Added play/pause toggle images 
+    - Fixed #172: remove *.PNGw files with "Clear previous frame files in directory"
+    - Improvements for WMTS support
+;   or something like this 
+    1.0 - First stable release
+    0.9 - All features implemented
+    0.8 - First testing release
+
+; Tags are in comma separated value format, spaces are allowed within the
+; tag name.
+; Tags should be in English language. Please also check for existing tags and
+; synonyms before creating a new one.
+tags=nurbs,0.17,hello world
+
+; these metadata can be empty, they will eventually become mandatory.
+homepage=http://www.itopen.it
+
+; icon size should be: ?????
+icon=icon.png
+screenshot=screenshot.png
+
+; animated gifs are recommended
+screencast=screencast.gif
+
+; experimental flag (applies to the single version)
+experimental=True
+
+; deprecated flag (applies to the whole plugin and not only to the uploaded version)
+deprecated=False
+
+; if empty, it will be automatically set to major version + .99
+FreeCADMaximumVersion=0.17.xxxx
+
+; start of dependency section
+
+[dependencies]
+workbenches=part,assembly,raytracer
+
+; specific python version we need to work with?
+python=3.x.x
+
+; add 3rd party oython libs
+pylibs=numpy vX.y.z
+pylibs=scipy vX.y.z
+
+; add 3rd party applications
+3rdparty=VTK vX.y.z
+3rdparty=OCC v7.1.1
+
+; add dependencies of other FC addons
+FCaddon=assembly2@g3425fdr,part-o-magic@f32sed43
+
+; end of dependency section
